@@ -1,20 +1,21 @@
-import React from 'react'
-import { BrowserRouter } from 'react-router-dom';
-import { AppRoutes } from '../AppRoutes';
-import '../styles/App.css';
-import { NavBar } from './NavBar';
-const App = () => {
+import React from "react";
+import { NavLink } from "react-router-dom";
 
+export const NavBar = () => {
   return (
-    <BrowserRouter>
-      <div id="main">
-        <NavBar />
-        <AppRoutes />
-      </div>
-    </BrowserRouter>
-
-  )
-}
-
-
-export default App;
+    <nav>
+      <ul>
+        <li>
+          <NavLink className="index-link" to="/">
+            Index Page
+          </NavLink>
+        </li>
+        <li>
+          <NavLink className="home-link" to="/home">
+            Home Page
+          </NavLink>
+        </li>
+      </ul>
+    </nav>
+  );
+};
